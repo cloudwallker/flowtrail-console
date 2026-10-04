@@ -1,0 +1,36 @@
+@base = http://127.0.0.1:18081
+
+### 健康检查
+GET {{base}}/api/health
+
+### 校验离线定义
+POST {{base}}/api/workflows/validate
+Content-Type: application/json
+
+< hello-workflow.json
+
+### 保存工作流，响应中的 id 用于运行
+POST {{base}}/api/workflows
+Content-Type: application/json
+
+< hello-workflow.json
+
+### 查看工作流
+GET {{base}}/api/workflows
+
+### 创建运行：替换 workflowId，202 后用返回的 run id 查询
+POST {{base}}/api/workflows/{{workflowId}}/runs
+Content-Type: application/json
+Idempotency-Key: hello-demo-1
+
+{"inputs":{"name":"学习者"}}
+
+### 查看节点状态和尝试历史
+GET {{base}}/api/runs/{{runId}}
+
+### 事件重放
+GET {{base}}/api/runs/{{runId}}/events?after=0
+Accept: text/event-stream
+
+### 显式恢复
+POST {{base}}/api/runs/{{runId}}/resume

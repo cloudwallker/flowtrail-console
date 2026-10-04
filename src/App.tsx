@@ -1,0 +1,12 @@
+import { lazy, Suspense } from 'react';
+import { NavLink, Navigate, Route, Routes } from 'react-router-dom';
+import { Activity, ArrowUpRight, Blocks, ChartNoAxesCombined, GitBranch, Layers3 } from 'lucide-react';
+import { LoadingState } from './components/LoadState';
+const WorkflowsPage = lazy(() => import('./pages/WorkflowsPage'));
+const RunsPage = lazy(() => import('./pages/RunsPage'));
+const NewRunPage = lazy(() => import('./pages/NewRunPage'));
+const RunDetailPage = lazy(() => import('./pages/RunDetailPage'));
+const PerformancePage = lazy(() => import('./pages/PerformancePage'));
+export default function App() {
+  return <div className="app-shell"><a href="#main-content" className="skip-link">跳到主要内容</a><aside className="sidebar"><NavLink className="brand" to="/workflows"><span className="brand-mark"><GitBranch size={24} /></span><span>FlowTrail<small>运行监控台</small></span></NavLink><div className="sidebar-label">工作空间</div><nav aria-label="主要导航"><NavLink to="/workflows" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}><Layers3 size={19} /><span>工作流</span><ArrowUpRight size={14} /></NavLink><NavLink to="/performance" className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}><ChartNoAxesCombined size={19} /><span>性能实验</span></NavLink></nav><div className="sidebar-description"><Activity size={21} /><strong>每一步，清晰可追溯。</strong><p>查看执行状态、追踪事件，<br />从已提交的检查点恢复。</p></div><div className="sidebar-footer"><span className="sidebar-dot" /><span>执行记录可追溯<small>FlowTrail Console</small></span></div></aside><div className="main-shell"><header className="topbar"><span><Blocks size={16} />工作流运行监控</span><span className="topbar-right">执行 · 事件 · 恢复<span className="avatar">FT</span></span></header><main id="main-content" className="main-content" tabIndex={-1}><Suspense fallback={<LoadingState title="正在加载页面" />}><Routes><Route path="/" element={<Navigate to="/workflows" replace />} /><Route path="/workflows" element={<WorkflowsPage />} /><Route path="/workflows/:id/runs" element={<RunsPage />} /><Route path="/workflows/:id/new" element={<NewRunPage />} /><Route path="/runs/:id" element={<RunDetailPage />} /><Route path="/performance" element={<PerformancePage />} /><Route path="*" element={<div className="state-panel"><h1>页面不存在</h1><p>请检查地址，或返回工作流列表。</p><NavLink className="button primary" to="/workflows">返回工作流</NavLink></div>} /></Routes></Suspense><footer className="page-footer"><span>FlowTrail Console</span><span>状态来自后端 · 不确定的操作需要核查</span></footer></main></div></div>;
+}

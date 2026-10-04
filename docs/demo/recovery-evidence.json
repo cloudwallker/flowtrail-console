@@ -1,0 +1,272 @@
+{
+  "recordedAt": "2026-10-04T16:08:04.956Z",
+  "fault": "forced termination of the isolated Java process",
+  "syntheticInput": true,
+  "oldPid": 40744,
+  "newPid": 34056,
+  "sameIsolatedDatabase": true,
+  "assertions": {
+    "checkpointExecutedOnce": true,
+    "interruptedAttemptRetained": true,
+    "resumedAttemptSucceeded": true,
+    "contiguousEvents": true,
+    "terminalWatermarkConsumed": true
+  },
+  "before": {
+    "id": "26c278d4-706b-4892-a6b3-f63455cd38a6",
+    "workflowId": "a38354e2-4a15-4ca6-8d75-c8fa4cdfcb85",
+    "status": "RUNNING",
+    "inputs": {
+      "document": "合成测试数据，不含真实用户信息"
+    },
+    "nodes": [
+      {
+        "id": "checkpoint",
+        "status": "SUCCEEDED",
+        "output": "已保存演示报告：合成测试数据，不含真实用户信息",
+        "error": null,
+        "durationMs": 0,
+        "attemptId": 1,
+        "attempts": [
+          {
+            "attemptId": 1,
+            "status": "SUCCEEDED",
+            "output": "已保存演示报告：合成测试数据，不含真实用户信息",
+            "error": null,
+            "startedAt": "2026-10-04T16:07:32.691887Z",
+            "finishedAt": "2026-10-04T16:07:32.706985Z"
+          }
+        ]
+      },
+      {
+        "id": "slow_http",
+        "status": "RUNNING",
+        "output": null,
+        "error": null,
+        "durationMs": 0,
+        "attemptId": 1,
+        "attempts": [
+          {
+            "attemptId": 1,
+            "status": "RUNNING",
+            "output": null,
+            "error": null,
+            "startedAt": "2026-10-04T16:07:32.752153Z",
+            "finishedAt": null
+          }
+        ]
+      },
+      {
+        "id": "result",
+        "status": "PENDING",
+        "output": null,
+        "error": null,
+        "durationMs": 0,
+        "attemptId": 0,
+        "attempts": []
+      }
+    ],
+    "startedAt": "2026-10-04T16:07:32.530428Z",
+    "finishedAt": null,
+    "lastEventSeq": 5
+  },
+  "after": {
+    "id": "26c278d4-706b-4892-a6b3-f63455cd38a6",
+    "workflowId": "a38354e2-4a15-4ca6-8d75-c8fa4cdfcb85",
+    "status": "SUCCEEDED",
+    "inputs": {
+      "document": "合成测试数据，不含真实用户信息"
+    },
+    "nodes": [
+      {
+        "id": "checkpoint",
+        "status": "SUCCEEDED",
+        "output": "已保存演示报告：合成测试数据，不含真实用户信息",
+        "error": null,
+        "durationMs": 0,
+        "attemptId": 1,
+        "attempts": [
+          {
+            "attemptId": 1,
+            "status": "SUCCEEDED",
+            "output": "已保存演示报告：合成测试数据，不含真实用户信息",
+            "error": null,
+            "startedAt": "2026-10-04T16:07:32.691887Z",
+            "finishedAt": "2026-10-04T16:07:32.706985Z"
+          }
+        ]
+      },
+      {
+        "id": "slow_http",
+        "status": "SUCCEEDED",
+        "output": "{\"message\":\"本地 HTTP 节点已完成\",\"key\":\"65f3dcfe-0897-4422-9267-62a8b2d00229\",\"request\":2}",
+        "error": null,
+        "durationMs": 4306,
+        "attemptId": 2,
+        "attempts": [
+          {
+            "attemptId": 1,
+            "status": "INTERRUPTED",
+            "output": null,
+            "error": "Owner lease expired",
+            "startedAt": "2026-10-04T16:07:32.752153Z",
+            "finishedAt": "2026-10-04T16:07:50.314106Z"
+          },
+          {
+            "attemptId": 2,
+            "status": "SUCCEEDED",
+            "output": "{\"message\":\"本地 HTTP 节点已完成\",\"key\":\"65f3dcfe-0897-4422-9267-62a8b2d00229\",\"request\":2}",
+            "error": null,
+            "startedAt": "2026-10-04T16:07:50.608815Z",
+            "finishedAt": "2026-10-04T16:07:54.946359Z"
+          }
+        ]
+      },
+      {
+        "id": "result",
+        "status": "SUCCEEDED",
+        "output": "已保存演示报告：合成测试数据，不含真实用户信息 / HTTP 调用完成",
+        "error": null,
+        "durationMs": 0,
+        "attemptId": 1,
+        "attempts": [
+          {
+            "attemptId": 1,
+            "status": "SUCCEEDED",
+            "output": "已保存演示报告：合成测试数据，不含真实用户信息 / HTTP 调用完成",
+            "error": null,
+            "startedAt": "2026-10-04T16:07:54.983229Z",
+            "finishedAt": "2026-10-04T16:07:55.034613Z"
+          }
+        ]
+      }
+    ],
+    "startedAt": "2026-10-04T16:07:32.530428Z",
+    "finishedAt": "2026-10-04T16:07:55.119705Z",
+    "lastEventSeq": 12
+  },
+  "events": [
+    {
+      "runId": "26c278d4-706b-4892-a6b3-f63455cd38a6",
+      "nodeId": null,
+      "attemptId": null,
+      "seq": 1,
+      "type": "RUN_QUEUED",
+      "payload": {
+        "version": 1
+      },
+      "createdAt": "2026-10-04T16:07:32.530428Z"
+    },
+    {
+      "runId": "26c278d4-706b-4892-a6b3-f63455cd38a6",
+      "nodeId": null,
+      "attemptId": null,
+      "seq": 2,
+      "type": "RUN_STARTED",
+      "payload": {
+        "epoch": 1
+      },
+      "createdAt": "2026-10-04T16:07:32.613108Z"
+    },
+    {
+      "runId": "26c278d4-706b-4892-a6b3-f63455cd38a6",
+      "nodeId": "checkpoint",
+      "attemptId": 1,
+      "seq": 3,
+      "type": "NODE_STARTED",
+      "payload": {},
+      "createdAt": "2026-10-04T16:07:32.691887Z"
+    },
+    {
+      "runId": "26c278d4-706b-4892-a6b3-f63455cd38a6",
+      "nodeId": "checkpoint",
+      "attemptId": 1,
+      "seq": 4,
+      "type": "NODE_SUCCEEDED",
+      "payload": {
+        "output": "已保存演示报告：合成测试数据，不含真实用户信息"
+      },
+      "createdAt": "2026-10-04T16:07:32.706985Z"
+    },
+    {
+      "runId": "26c278d4-706b-4892-a6b3-f63455cd38a6",
+      "nodeId": "slow_http",
+      "attemptId": 1,
+      "seq": 5,
+      "type": "NODE_STARTED",
+      "payload": {},
+      "createdAt": "2026-10-04T16:07:32.752153Z"
+    },
+    {
+      "runId": "26c278d4-706b-4892-a6b3-f63455cd38a6",
+      "nodeId": "slow_http",
+      "attemptId": 1,
+      "seq": 6,
+      "type": "NODE_INTERRUPTED",
+      "payload": {
+        "reason": "Lease takeover"
+      },
+      "createdAt": "2026-10-04T16:07:50.314106Z"
+    },
+    {
+      "runId": "26c278d4-706b-4892-a6b3-f63455cd38a6",
+      "nodeId": null,
+      "attemptId": null,
+      "seq": 7,
+      "type": "RUN_STARTED",
+      "payload": {
+        "epoch": 2
+      },
+      "createdAt": "2026-10-04T16:07:50.314106Z"
+    },
+    {
+      "runId": "26c278d4-706b-4892-a6b3-f63455cd38a6",
+      "nodeId": "slow_http",
+      "attemptId": 2,
+      "seq": 8,
+      "type": "NODE_STARTED",
+      "payload": {},
+      "createdAt": "2026-10-04T16:07:50.608815Z"
+    },
+    {
+      "runId": "26c278d4-706b-4892-a6b3-f63455cd38a6",
+      "nodeId": "slow_http",
+      "attemptId": 2,
+      "seq": 9,
+      "type": "NODE_SUCCEEDED",
+      "payload": {
+        "output": "{\"message\":\"本地 HTTP 节点已完成\",\"key\":\"65f3dcfe-0897-4422-9267-62a8b2d00229\",\"request\":2}"
+      },
+      "createdAt": "2026-10-04T16:07:54.946359Z"
+    },
+    {
+      "runId": "26c278d4-706b-4892-a6b3-f63455cd38a6",
+      "nodeId": "result",
+      "attemptId": 1,
+      "seq": 10,
+      "type": "NODE_STARTED",
+      "payload": {},
+      "createdAt": "2026-10-04T16:07:54.983229Z"
+    },
+    {
+      "runId": "26c278d4-706b-4892-a6b3-f63455cd38a6",
+      "nodeId": "result",
+      "attemptId": 1,
+      "seq": 11,
+      "type": "NODE_SUCCEEDED",
+      "payload": {
+        "output": "已保存演示报告：合成测试数据，不含真实用户信息 / HTTP 调用完成"
+      },
+      "createdAt": "2026-10-04T16:07:55.034613Z"
+    },
+    {
+      "runId": "26c278d4-706b-4892-a6b3-f63455cd38a6",
+      "nodeId": null,
+      "attemptId": null,
+      "seq": 12,
+      "type": "RUN_SUCCEEDED",
+      "payload": {},
+      "createdAt": "2026-10-04T16:07:55.119705Z"
+    }
+  ]
+}

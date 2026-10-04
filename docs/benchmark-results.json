@@ -1,0 +1,159 @@
+{
+  "measuredAt": "2026-10-04T16:15:12.713Z",
+  "dataset": "10,000 deterministic synthetic events; shared EventRow",
+  "build": "Vite production build",
+  "cache": "fresh browser context for each sample; empty browser asset cache",
+  "samplesPerMode": 5,
+  "viewport": {
+    "width": 1440,
+    "height": 1000
+  },
+  "environment": {
+    "os": "win32 10.0.26200 x64",
+    "cpu": "12th Gen Intel(R) Core(TM) i7-12700H",
+    "logicalCPUs": 20,
+    "node": "v24.15.0",
+    "browser": "153.0.8010.12",
+    "headless": true
+  },
+  "rows": [
+    {
+      "round": 1,
+      "mode": "plain",
+      "renderMs": 2152.3,
+      "rowCount": 10000,
+      "count": 10000,
+      "ready": true,
+      "frameP95Ms": 33.4,
+      "scrollLongTasks": 1,
+      "scrollLongTaskMs": 641,
+      "finalRows": 10000
+    },
+    {
+      "round": 1,
+      "mode": "virtual",
+      "renderMs": 291.3,
+      "rowCount": 16,
+      "count": 10000,
+      "ready": true,
+      "frameP95Ms": 16.8,
+      "scrollLongTasks": 0,
+      "scrollLongTaskMs": 0,
+      "finalRows": 16
+    },
+    {
+      "round": 2,
+      "mode": "virtual",
+      "renderMs": 280.9,
+      "rowCount": 16,
+      "count": 10000,
+      "ready": true,
+      "frameP95Ms": 16.7,
+      "scrollLongTasks": 0,
+      "scrollLongTaskMs": 0,
+      "finalRows": 16
+    },
+    {
+      "round": 2,
+      "mode": "plain",
+      "renderMs": 1352.9,
+      "rowCount": 10000,
+      "count": 10000,
+      "ready": true,
+      "frameP95Ms": 33.4,
+      "scrollLongTasks": 1,
+      "scrollLongTaskMs": 570,
+      "finalRows": 10000
+    },
+    {
+      "round": 3,
+      "mode": "plain",
+      "renderMs": 1589.4,
+      "rowCount": 10000,
+      "count": 10000,
+      "ready": true,
+      "frameP95Ms": 33.4,
+      "scrollLongTasks": 1,
+      "scrollLongTaskMs": 643,
+      "finalRows": 10000
+    },
+    {
+      "round": 3,
+      "mode": "virtual",
+      "renderMs": 293,
+      "rowCount": 16,
+      "count": 10000,
+      "ready": true,
+      "frameP95Ms": 16.7,
+      "scrollLongTasks": 0,
+      "scrollLongTaskMs": 0,
+      "finalRows": 16
+    },
+    {
+      "round": 4,
+      "mode": "virtual",
+      "renderMs": 276.8,
+      "rowCount": 16,
+      "count": 10000,
+      "ready": true,
+      "frameP95Ms": 16.8,
+      "scrollLongTasks": 0,
+      "scrollLongTaskMs": 0,
+      "finalRows": 16
+    },
+    {
+      "round": 4,
+      "mode": "plain",
+      "renderMs": 1343.6,
+      "rowCount": 10000,
+      "count": 10000,
+      "ready": true,
+      "frameP95Ms": 33.4,
+      "scrollLongTasks": 1,
+      "scrollLongTaskMs": 538,
+      "finalRows": 10000
+    },
+    {
+      "round": 5,
+      "mode": "plain",
+      "renderMs": 1477.4,
+      "rowCount": 10000,
+      "count": 10000,
+      "ready": true,
+      "frameP95Ms": 33.4,
+      "scrollLongTasks": 1,
+      "scrollLongTaskMs": 567,
+      "finalRows": 10000
+    },
+    {
+      "round": 5,
+      "mode": "virtual",
+      "renderMs": 299,
+      "rowCount": 16,
+      "count": 10000,
+      "ready": true,
+      "frameP95Ms": 16.7,
+      "scrollLongTasks": 0,
+      "scrollLongTaskMs": 0,
+      "finalRows": 16
+    }
+  ],
+  "summaries": {
+    "plain": {
+      "renderMedianMs": 1477.4,
+      "renderMinMs": 1343.6,
+      "renderMaxMs": 2152.3,
+      "rowMedian": 10000,
+      "frameP95MedianMs": 33.4,
+      "scrollLongTasksMedian": 1
+    },
+    "virtual": {
+      "renderMedianMs": 291.3,
+      "renderMinMs": 276.8,
+      "renderMaxMs": 299,
+      "rowMedian": 16,
+      "frameP95MedianMs": 16.7,
+      "scrollLongTasksMedian": 0
+    }
+  }
+}
