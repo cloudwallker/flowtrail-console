@@ -16,7 +16,7 @@ English | [中文](README_ZH.md) · [Architecture](docs/architecture.md) · [Rec
 - Resume eligible failed runs after the lease expires. Successful checkpoints are preserved; interrupted attempts remain visible.
 - Open `/performance` to compare ordinary and virtual lists using the same deterministic synthetic events.
 
-This is a portfolio project built on [FlowTrail Server](https://github.com/cloudwallker/flowtrail-server). The existing execution engine is reused; this repository adds the React console, event client, stable snapshot contract, browser acceptance suite and evidence. See [source attribution](docs/provenance.md).
+The console builds on [FlowTrail Server](https://github.com/cloudwallker/flowtrail-server), reusing its execution engine and adding the React interface, event client, stable snapshot contract, browser acceptance suite and evidence. See [source attribution](docs/provenance.md).
 
 ## Run locally
 

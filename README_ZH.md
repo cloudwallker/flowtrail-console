@@ -2,7 +2,7 @@
 
 基于 React＋TypeScript 的工作流监控台，复用 FlowTrail Java 后端，展示节点尝试、事件回放与真实进程故障后的恢复过程。
 
-**作品重点是状态管理、SSE 一致性、完整交互、自动化验收和可复现性能测量。**
+**跟踪节点尝试与执行事件，在 Java 进程故障和浏览器重连后回放持久化事件，并用同一批 10,000 条合成数据比较普通与虚拟事件列表。**
 
 [English](README.md) | 中文 · [架构设计](docs/architecture.md) · [故障恢复演示](docs/recovery.md) · [性能实测](docs/performance.md)
 
