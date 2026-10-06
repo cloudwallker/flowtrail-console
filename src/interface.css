@@ -1,0 +1,119 @@
+/* Interface foundations: readable operational data at every viewport. */
+:root {
+  --ink: #172b40;
+  --muted: #526377;
+  --line: #d8e1e9;
+  --teal: #08796d;
+  --teal-soft: #e6f4f0;
+  --radius: 14px;
+  font-size: 16px;
+  line-height: 1.55;
+  background: #f3f6f9;
+}
+.main-content { max-width: 1760px; margin-inline: auto; }
+.topbar { border-bottom-color: var(--line); background: #fff; font-size: 14px; }
+.topbar-right { color: var(--muted); font-size: 13px; }
+.brand small, .sidebar-label, .sidebar-footer small { font-size: 12px; letter-spacing: .04em; }
+.nav-link { min-height: 48px; font-size: 15px; }
+.sidebar-description p, .sidebar-footer { font-size: 13px; line-height: 1.7; }
+.page-heading p, .panel-heading p { color: var(--muted); font-size: 15px; line-height: 1.65; }
+.eyebrow { font-size: 12px; letter-spacing: .09em; }
+.workflow-card, .summary-strip, .input-panel, .event-panel, .node-list, .saved-inputs {
+  border-color: var(--line);
+  box-shadow: 0 4px 20px rgb(23 43 64 / 4%);
+}
+.workflow-card h3 { line-height: 1.4; overflow-wrap: anywhere; }
+.workflow-created, .workflow-card p, .workflow-card-actions, .fine-print, .notice, .field,
+.input-panel label, .run-guide p, .run-guide li, .page-footer { font-size: 13px; line-height: 1.65; }
+.summary-strip span, .run-metrics span { font-size: 13px; color: var(--muted); }
+.button, .search-field, .filters select, .field input, .field textarea, .field select,
+.tabs > button, .event-toolbar select { min-height: 44px; font-size: 14px; }
+.button { white-space: normal; text-wrap: pretty; }
+.button.primary { background: var(--teal); border-color: var(--teal); color: #fff; }
+.button.primary:hover:not(:disabled) { background: #05675d; }
+.status-badge, .node-type-tags, .tag { font-size: 12px; line-height: 1.5; }
+.runs-table, .run-link, .table-time, .node-main strong { font-size: 14px; }
+.node-main > span, .node-status small, .connection-bar, .event-row, .event-table-heading,
+.event-footer, .metadata, .drawer-body .notice, .output-block, .attempt-card summary { font-size: 13px; }
+.node-kind, .node-order small { font-size: 11px; }
+.connection-bar { line-height: 1.65; }
+.metadata dt { color: var(--muted); }
+.metadata dd, .output-block { color: #374f63; }
+.request-key code, .run-id .mono { font-size: 12px; overflow-wrap: anywhere; }
+.eyebrow, .back-link, .page-footer, .node-kind, .node-order small,
+.node-main > span, .node-status small, .event-table-heading, .event-seq,
+.event-time, .event-node, .event-node small, .event-content, .event-empty,
+.event-footer, .connection-bar > span:nth-of-type(2), .tabs > button {
+  color: var(--muted);
+}
+.event-type { color: #326654; }
+.tabs > button.active { color: var(--teal); }
+.sidebar-label, .sidebar-footer small, .sidebar-description p, .brand small { color: #b6c6d3; }
+input::placeholder, textarea::placeholder { color: #526377; opacity: 1; }
+.event-time, .event-node small { font-size: 12px; }
+.icon-button { min-width: 44px; min-height: 44px; }
+:is(button, a, input, textarea, select, summary):focus-visible {
+  outline: 3px solid #08796d;
+  outline-offset: 3px;
+}
+.sidebar :is(button, a):focus-visible { outline-color: #82e4cf; }
+.skip-link:focus { background: #fff; color: var(--ink); padding: 12px 18px; }
+@media (max-width: 900px) {
+  .main-content { padding: 28px 22px; }
+  .page-heading { flex-wrap: wrap; }
+  .page-heading > .button { margin-top: 0; }
+  .filters { flex-wrap: wrap; }
+}
+@media (max-width: 640px) {
+  .sidebar { height: auto; min-height: 72px; flex-wrap: wrap; padding: 12px 16px; gap: 12px; }
+  .brand { font-size: 22px; }
+  .brand small { font-size: 11px; letter-spacing: .03em; }
+  .sidebar nav { flex: 1; justify-content: flex-end; }
+  .nav-link { min-height: 44px; height: auto; padding: 10px; font-size: 13px; }
+  .nav-link svg { width: 18px; height: 18px; }
+  .topbar { height: auto; min-height: 48px; gap: 12px; padding: 12px 18px; font-size: 13px; }
+  .topbar-right { font-size: 12px; }
+  .topbar-right > .avatar { display: none; }
+  .main-content { padding: 24px 18px; }
+  .page-heading { gap: 18px; }
+  .page-heading h1 { font-size: 28px; line-height: 1.35; }
+  .page-heading p { font-size: 15px; }
+  .page-heading > .button, .detail-heading .button-row .button { min-height: 44px; font-size: 14px; padding: 10px 14px; }
+  .summary-strip { flex-wrap: wrap; gap: 16px; padding: 20px; }
+  .summary-strip > div:not(.summary-note) { padding-right: 16px; margin-right: 0; }
+  .summary-strip span { font-size: 13px; }
+  .summary-strip strong { font-size: 28px; }
+  .filters { gap: 10px; }
+  .search-field { min-height: 44px; }
+  .search-field input, .filters select { font-size: 16px; min-height: 44px; }
+  .filters select { max-width: none; }
+  .workflow-card h3 { font-size: 20px; }
+  .workflow-created, .workflow-card-actions, .notice, .field, .run-guide li, .page-footer { font-size: 13px; }
+  .workflow-card-actions { flex-wrap: wrap; gap: 10px; padding-block: 16px; }
+  .field input, .field textarea, .field select { font-size: 16px; }
+  .status-badge { font-size: 12px; padding: 6px 9px; }
+  .runs-table th, .runs-table td { padding: 16px 12px; }
+  .run-link, .runs-table .status-badge { font-size: 12px; }
+  .tabs { gap: 20px; }
+  .tabs > button { font-size: 14px; min-height: 44px; }
+  .tabs .count { font-size: 12px; }
+  .node-row { align-items: flex-start; }
+  .node-main strong { font-size: 14px; }
+  .node-main > span, .node-status small { font-size: 12px; }
+  .node-status { min-width: 0; }
+  .node-status .status-badge { font-size: 11px; }
+  .connection-bar strong, .connection-bar > span:nth-of-type(2), .connection-bar .button { font-size: 12px; }
+  .connection-bar .button { min-height: 44px; }
+  .event-toolbar input, .event-toolbar select { font-size: 16px; }
+  .event-table-heading, .event-row { font-size: 12px; }
+  .event-footer { font-size: 12px; }
+  .event-footer { flex-wrap: wrap; }
+  .event-footer::after { content: '向右滚动表格，查看节点与事件内容'; width: 100%; color: var(--muted); }
+  .modal-heading h2 { font-size: 20px; }
+  .metadata, .output-block, .template-option small { font-size: 13px; }
+  .template-option strong { font-size: 15px; }
+  .page-footer { line-height: 1.7; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; }
+}

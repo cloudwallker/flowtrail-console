@@ -73,3 +73,7 @@ The URL holds filters; TanStack Query holds REST snapshots; React Hook Form + Zo
 ## License
 
 MIT. Backend attribution and original license are retained under `server/`; dependency notices are in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
+
+## Interface
+
+A durable workflow console with readable run status, searchable execution events, and layouts for desktop and mobile.

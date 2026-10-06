@@ -75,3 +75,7 @@ URL 存筛选；TanStack Query 存服务端快照；React Hook Form＋Zod 存输
 | `docs` | 设计说明、实测数据、演示与来源 |
 
 MIT 许可；原后端许可保留于 `server/`，依赖说明见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。
+
+## 界面体验
+
+持久化工作流控制台，提供清晰的运行状态、可搜索的执行事件和桌面及手机布局。
