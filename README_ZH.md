@@ -22,6 +22,8 @@
 
 需要 Node.js **24.15+**（22.x 系列最低 22.22.2）、Java **21**、Maven **3.8.5+**。将 Maven/npm 加入 PATH，设置 Java 21 的 `JAVA_HOME`，确保 5173、18081、18082 端口空闲。
 
+Git 在各平台检出后端 Java 源码时均保留 LF 换行，与 Spotless 构建检查保持一致。已有 Windows 工作副本若仅因 CRLF 换行报错，可先运行 `mvn -f server/pom.xml spotless:apply` 进行规范化，再构建；提交前检查实际差异。
+
 ```sh
 npm ci --legacy-peer-deps
 npm run dev

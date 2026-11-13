@@ -1,0 +1,2 @@
+# The backend's Spotless check requires LF even on Windows checkouts.
+server/**/*.java text eol=lf

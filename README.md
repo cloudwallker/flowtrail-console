@@ -22,6 +22,8 @@ The console builds on [FlowTrail Server](https://github.com/cloudwallker/flowtra
 
 Requires Node.js **24.15+** (the 22.x line requires 22.22.2+), Java **21**, Maven **3.8.5+** and free ports 5173, 18081 and 18082. Maven and npm must be on `PATH`; set `JAVA_HOME` to Java 21.
 
+Git preserves LF line endings for backend Java sources on every platform, matching the Spotless build check. If an existing Windows checkout reports CRLF-only violations, run `mvn -f server/pom.xml spotless:apply` to normalize it before building; review the resulting diff before committing.
+
 ```sh
 npm ci --legacy-peer-deps
 npm run dev
